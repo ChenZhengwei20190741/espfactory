@@ -123,7 +123,7 @@ DRAM_ATTR static const lcd_init_cmd_t st_init_cmds[]={
     {0x29, {0}, 0x80},
     {0, {0}, 0xff}
 };
-
+#if !ESP_KALUGA_V1_2
 DRAM_ATTR static const lcd_init_cmd_t ili_init_cmds[]={
     /* Power contorl B, power control = 0, DC_ENA = 1 */
     {0xCF, {0x00, 0x83, 0X30}, 3},
@@ -183,7 +183,7 @@ DRAM_ATTR static const lcd_init_cmd_t ili_init_cmds[]={
     {0x29, {0}, 0x80},
     {0, {0}, 0xff},
 };
-
+#endif
 /* Send a command to the LCD. Uses spi_device_polling_transmit, which waits
  * until the transfer is complete.
  *
@@ -281,6 +281,12 @@ void lcd_init(spi_device_handle_t spi)
         printf("ST7789V detected.\n");
     }
 
+#if ESP_KALUGA_V1_2
+    lcd_type = LCD_TYPE_ST;
+   lcd_init_cmds = st_init_cmds;
+
+#else
+
 #ifdef CONFIG_LCD_TYPE_AUTO
     lcd_type = lcd_detected_type;
 #elif defined( CONFIG_LCD_TYPE_ST7789V )
@@ -290,6 +296,7 @@ void lcd_init(spi_device_handle_t spi)
     printf("kconfig: force CONFIG_LCD_TYPE_ILI9341.\n");
     lcd_type = LCD_TYPE_ILI;
 #endif
+
     if ( lcd_type == LCD_TYPE_ST ) {
         printf("LCD ST7789V initialization.\n");
         lcd_init_cmds = st_init_cmds;
@@ -297,6 +304,8 @@ void lcd_init(spi_device_handle_t spi)
         printf("LCD ILI9341 initialization.\n");
         lcd_init_cmds = ili_init_cmds;
     }
+
+#endif
 
     //Send all the commands
     while (lcd_init_cmds[cmd].databytes!=0xff) {
