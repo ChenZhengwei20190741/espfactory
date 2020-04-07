@@ -1,0 +1,2 @@
+/home/chenzhengwei/.espressif/tools/xtensa-esp32s2-elf/esp-2019r2-8.2.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-ar qc libtjpgd.a  CMakeFiles/__idf_tjpgd.dir/src/tjpgd.c.obj
+/home/chenzhengwei/.espressif/tools/xtensa-esp32s2-elf/esp-2019r2-8.2.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-ranlib libtjpgd.a
