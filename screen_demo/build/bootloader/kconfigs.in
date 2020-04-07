@@ -1,5 +1,0 @@
-source "/home/chenzhengwei/esp/gitlab_esp/internal_portject/XY/camera/esp32-s2beta-hmi/tools/esp-idf/components/spi_flash/Kconfig"
-source "/home/chenzhengwei/esp/gitlab_esp/internal_portject/XY/camera/esp32-s2beta-hmi/tools/esp-idf/components/esp32s2/Kconfig"
-source "/home/chenzhengwei/esp/gitlab_esp/internal_portject/XY/camera/esp32-s2beta-hmi/tools/esp-idf/components/efuse/Kconfig"
-source "/home/chenzhengwei/esp/gitlab_esp/internal_portject/XY/camera/esp32-s2beta-hmi/tools/esp-idf/components/log/Kconfig"
-source "/home/chenzhengwei/esp/gitlab_esp/internal_portject/XY/camera/esp32-s2beta-hmi/tools/esp-idf/components/esp_common/Kconfig"
