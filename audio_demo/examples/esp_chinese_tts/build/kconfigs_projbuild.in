@@ -1,0 +1,6 @@
+source "/home/chenzhengwei/esp/gitlab_esp/esp-idf/components/partition_table/Kconfig.projbuild"
+source "/home/chenzhengwei/esp/gitlab_esp/esp-idf/components/bootloader/Kconfig.projbuild"
+source "/home/chenzhengwei/esp/gitlab_esp/esp-idf/components/app_update/Kconfig.projbuild"
+source "/home/chenzhengwei/esp/gitlab_esp/esp-idf/components/esptool_py/Kconfig.projbuild"
+source "/home/chenzhengwei/esp/gitlab_esp/internal_portject/ESP32-S2-Kaluga-1/factory/audio_demo/components/esp-sr/Kconfig.projbuild"
+source "/home/chenzhengwei/esp/gitlab_esp/internal_portject/ESP32-S2-Kaluga-1/factory/audio_demo/components/hardware_driver/Kconfig.projbuild"

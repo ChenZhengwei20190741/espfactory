@@ -1,0 +1,2 @@
+/home/chenzhengwei/.espressif/tools/xtensa-esp32s2-elf/esp-2020r1-8.2.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-ar qc libmain.a  CMakeFiles/__idf_main.dir/pretty_effect.c.obj CMakeFiles/__idf_main.dir/spi_master_example_main.c.obj CMakeFiles/__idf_main.dir/decode_image.c.obj CMakeFiles/__idf_main.dir/__/__/image.jpg.S.obj
+/home/chenzhengwei/.espressif/tools/xtensa-esp32s2-elf/esp-2020r1-8.2.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-ranlib libmain.a
